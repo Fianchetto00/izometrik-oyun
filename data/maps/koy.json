@@ -1,0 +1,62 @@
+{
+  "id": "koy",
+  "name": "Köy",
+  "width": 40,
+  "height": 21,
+  "legend": {
+    "T": "forest_ground",
+    "~": "water",
+    "=": "bridge",
+    ".": "grass",
+    "o": "plaza",
+    "B": "building",
+    "R": "dungeon_rock",
+    "K": "barracks_door",
+    "X": "dungeon_door"
+  },
+  "rows": [
+    "TTTTTT~~~~~~..BBBBBBBBBBB...............",
+    "TTTTTT~~~~~~..BBBBBBBBBBB...............",
+    "TTTTTT~~~~~~..BBBBBBBBBBB...............",
+    "TTTTTT~~~~~~............................",
+    "TTTTTT~~~~~~............................",
+    "TTTTTT~~~~~~.....oooooo.......BBBB......",
+    "TTTTTT~~~~~~....oooooooo......BBBB......",
+    "TTTTTT~~~~~~...oooooooooo.....BBBB......",
+    "TTTTTT======...oooooooooo.....BBBB......",
+    "TTTTTT======...oooooooooo.....BBBB......",
+    "TTTTTT======...oooooooooo.....BBBB......",
+    "TTTTTT~~~~~~...oooooooooo...............",
+    "TTTTTT~~~~~~...oooooooooo...............",
+    "TTTTTT~~~~~~....oooooooo.....RRRRXRRRR..",
+    "TTTTTT~~~~~~.....oooooo......RRRRRRRRR..",
+    "TTTTTT~~~~~~.................RRRRRRRRR..",
+    "TTTTTT~~~~~~.BBBBBBKBBBBBB...RRRRRRRRR..",
+    "TTTTTT~~~~~~.BBBBBBBBBBBBB...RRRRRRRRR..",
+    "TTTTTT~~~~~~.BBBBBBBBBBBBB...RRRRRRRRR..",
+    "TTTTTT~~~~~~.BBBBBBBBBBBBB...RRRRRRRRR..",
+    "TTTTTT~~~~~~.BBBBBBBBBBBBB.............."
+  ],
+  "trees": {
+    "asset": "tree",
+    "seed": 20261116,
+    "density": 0.25,
+    "tileTypes": ["forest_ground"],
+    "clear": [
+      { "x": 0, "y": 8, "w": 6, "h": 3 },
+      { "x": 4, "y": 7, "w": 2, "h": 5 }
+    ]
+  },
+  "playerStart": { "x": 20, "y": 14 },
+  "npcs": [
+    { "id": "guard", "role": "guard", "x": 20, "y": 10 },
+    { "id": "captain", "role": "captain", "x": 19, "y": 16 },
+    { "id": "fisher", "role": "fisher", "x": 12, "y": 7 },
+    { "id": "blacksmith", "role": "blacksmith", "x": 28, "y": 5 },
+    { "id": "duo", "role": "duo", "x": 28, "y": 9 },
+    { "id": "armor_merchant", "role": "armor_merchant", "x": 17, "y": 3 },
+    { "id": "weapon_merchant", "role": "weapon_merchant", "x": 21, "y": 3 },
+    { "id": "general_merchant", "role": "general_merchant", "x": 28, "y": 10 },
+    { "id": "dungeon_entrance", "role": "dungeon_entrance", "x": 33, "y": 13, "interactFrom": { "x": 33, "y": 12 } }
+  ]
+}

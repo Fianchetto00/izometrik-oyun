@@ -1,0 +1,11 @@
+{
+  "grass":         { "walkable": true,  "floor": "grass" },
+  "forest_ground": { "walkable": true,  "floor": "forest_ground" },
+  "water":         { "walkable": false, "floor": "water" },
+  "bridge":        { "walkable": true,  "floor": "bridge" },
+  "plaza":         { "walkable": true,  "floor": "plaza" },
+  "building":      { "walkable": false, "floor": "grass", "block": "building" },
+  "dungeon_rock":  { "walkable": false, "floor": "grass", "block": "dungeon_rock" },
+  "barracks_door": { "walkable": true,  "floor": "door_wood", "interactive": true },
+  "dungeon_door":  { "walkable": true,  "floor": "door_cave", "interactive": true }
+}
