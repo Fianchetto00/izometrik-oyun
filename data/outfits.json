@@ -1,0 +1,12 @@
+{
+  "default": {
+    "skin": "#f1c27d",
+    "hair": "#4a2f1b",
+    "shirt": "#2e6fb7",
+    "pants": "#3b3b4f",
+    "boots": "#5a3a22",
+    "accessories": [
+      { "type": "belt", "color": "#8b5a2b" }
+    ]
+  }
+}

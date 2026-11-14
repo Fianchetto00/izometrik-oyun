@@ -1,0 +1,55 @@
+{
+  "_doc": "Each entry is either {type:'shape', shape, ...params} drawn by code, or {type:'image', src:'./assets/x.png', anchor:[ax, ay]} where anchor is the pixel aligned to the tile's ground centre (tiles) or the foot point (sprites).",
+  "grass": {
+    "type": "shape", "shape": "flat",
+    "colors": { "fill": ["#6fae4f", "#6aa84b", "#74b354", "#68a649"] }
+  },
+  "forest_ground": {
+    "type": "shape", "shape": "flat",
+    "colors": { "fill": ["#4d8a3c", "#4a8639", "#52903f"] }
+  },
+  "water": {
+    "type": "shape", "shape": "flat", "pattern": "waves",
+    "colors": { "fill": ["#2f6fb0", "#2c6aa9", "#3274b6"], "detail": "rgba(255,255,255,0.25)" }
+  },
+  "bridge": {
+    "type": "shape", "shape": "flat", "pattern": "planks",
+    "colors": { "fill": "#a7774a", "detail": "#7d5634" }
+  },
+  "plaza": {
+    "type": "shape", "shape": "flat", "pattern": "stones",
+    "colors": { "fill": ["#b8b0a2", "#b2aa9b", "#bdb5a8"], "detail": "rgba(80,70,60,0.35)" }
+  },
+  "door_wood": {
+    "type": "shape", "shape": "flat", "pattern": "door",
+    "colors": { "fill": "#6fae4f", "detail": "#5a3a22" }
+  },
+  "door_cave": {
+    "type": "shape", "shape": "flat", "pattern": "door",
+    "colors": { "fill": "#5d5a55", "detail": "#15120f" }
+  },
+  "building": {
+    "type": "shape", "shape": "block", "height": 48, "trimHeight": 10,
+    "colors": { "top": "#9c4a32", "left": "#d8c39b", "right": "#b9a37c", "trim": "#7c3a26" }
+  },
+  "dungeon_rock": {
+    "type": "shape", "shape": "block", "height": [34, 56],
+    "colors": {
+      "top": ["#77736c", "#6e6a63", "#7f7b73"],
+      "left": ["#5c5852", "#57534d"],
+      "right": ["#45423d", "#4a4742"]
+    }
+  },
+  "tree": {
+    "type": "shape", "shape": "tree",
+    "colors": {
+      "shadow": "rgba(0,0,0,0.25)",
+      "trunk": "#6b4423",
+      "leaves": ["#2f6b2a", "#2b6327", "#367530"],
+      "highlight": "rgba(255,255,255,0.12)"
+    }
+  },
+  "player": {
+    "type": "shape", "shape": "character"
+  }
+}
