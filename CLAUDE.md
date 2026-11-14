@@ -28,7 +28,9 @@ Sonra `http://localhost:8000/` aç. Build adımı yok.
 - Aynı anda tek aşama; sonraki aşamanın kodu yazılmaz. Dosyalar baştan
   yazılmaz, yalnızca değişen kısım düzenlenir. Birden fazla yol varsa en
   basiti seçilir.
-- Her aşama ayrı git commit'i. GitHub/push şimdilik yok.
+- Her aşama ayrı git commit'i, doğrudan `main`'e push edilir (Pull Request yok).
+  Depo: Fianchetto00/izometrik-oyun. GitHub Pages `main`'den yayınlar:
+  https://fianchetto00.github.io/izometrik-oyun/
 
 ## Proje yapısı
 ```
