@@ -1,13 +1,98 @@
 {
-  "nick": { "min": 2, "max": 16 },
+  "nick": {
+    "min": 2,
+    "max": 16
+  },
   "classes": [
-    { "id": "warrior", "name": "Savaşçı", "description": "Ağır zırh ve kılıçla ön safta dövüşür." },
-    { "id": "shaman", "name": "Şaman", "description": "Doğanın ruhlarından güç alır, yaraları sarar." },
-    { "id": "ninja", "name": "Ninja", "description": "Hızlı ve sessizdir, gölgelerden saldırır." }
+    {
+      "id": "warrior",
+      "name": "Savaşçı",
+      "description": "Ağır zırh ve kılıçla ön safta dövüşür.",
+      "start": {
+        "items": [
+          {
+            "id": "wooden_sword",
+            "count": 1
+          },
+          {
+            "id": "cloth_tunic",
+            "count": 1
+          },
+          {
+            "id": "health_potion",
+            "count": 2
+          }
+        ],
+        "equip": {
+          "weapon": "wooden_sword",
+          "armor": "cloth_tunic"
+        }
+      }
+    },
+    {
+      "id": "shaman",
+      "name": "Şaman",
+      "description": "Doğanın ruhlarından güç alır, yaraları sarar.",
+      "start": {
+        "items": [
+          {
+            "id": "oak_staff",
+            "count": 1
+          },
+          {
+            "id": "cloth_tunic",
+            "count": 1
+          },
+          {
+            "id": "health_potion",
+            "count": 2
+          },
+          {
+            "id": "bread",
+            "count": 3
+          }
+        ],
+        "equip": {
+          "weapon": "oak_staff",
+          "armor": "cloth_tunic"
+        }
+      }
+    },
+    {
+      "id": "ninja",
+      "name": "Ninja",
+      "description": "Hızlı ve sessizdir, gölgelerden saldırır.",
+      "start": {
+        "items": [
+          {
+            "id": "dagger",
+            "count": 1
+          },
+          {
+            "id": "cloth_tunic",
+            "count": 1
+          },
+          {
+            "id": "health_potion",
+            "count": 2
+          }
+        ],
+        "equip": {
+          "weapon": "dagger",
+          "armor": "cloth_tunic"
+        }
+      }
+    }
   ],
   "genders": [
-    { "id": "male", "name": "Erkek" },
-    { "id": "female", "name": "Kadın" }
+    {
+      "id": "male",
+      "name": "Erkek"
+    },
+    {
+      "id": "female",
+      "name": "Kadın"
+    }
   ],
   "outfitPattern": "{class}_{gender}",
   "ui": {

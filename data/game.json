@@ -8,5 +8,6 @@
   },
   "camera": {
     "zoom": 1.5
-  }
+  },
+  "startGold": 50
 }

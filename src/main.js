@@ -7,10 +7,14 @@ import { createPlayer, updatePlayer } from './player.js';
 import { createCamera, followTarget } from './camera.js';
 import { createNpcs, npcEntity } from './npc.js';
 import { showCharacterCreation } from './menu.js';
+import { createItemDb, createInventory } from './inventory.js';
+import { createInventoryUi } from './inventoryUi.js';
+import { createHud } from './hud.js';
 import { loadAssets } from './render/assets.js';
 import { createRenderer, drawMessage, renderScene } from './render/renderer.js';
 
 const MAX_DT = 0.05;
+const STOPPED = { x: 0, y: 0 };
 
 async function start() {
   const renderer = createRenderer(document.getElementById('game'));
@@ -24,6 +28,8 @@ async function start() {
       assets: './data/assets.json',
       outfits: './data/outfits.json',
       characters: './data/characters.json',
+      items: './data/items.json',
+      ui: './data/ui.json',
     });
     data.map = await loadJSON(mapPath(data.game.startMap));
     await loadAssets(data.assets);
@@ -47,12 +53,22 @@ async function start() {
   Object.assign(player, { name: hero.nick, classId: hero.classId, gender: hero.gender });
   const input = createInput();
 
+  const items = createItemDb(data.items);
+  const heroClass = data.characters.classes.find((c) => c.id === hero.classId);
+  const inventory = createInventory(items, data.game.startGold, heroClass.start);
+  const hud = createHud(document.body, data.ui.hud);
+  hud.setGold(inventory.gold);
+  const inventoryUi = createInventoryUi(document.body, inventory, items, data.ui.inventory,
+    () => hud.setGold(inventory.gold));
+
   let last = performance.now();
   function frame(now) {
     const dt = Math.min((now - last) / 1000, MAX_DT);
     last = now;
 
-    updatePlayer(player, dt, input.moveVector(), map);
+    // The world pauses while the inventory is open.
+    const dir = inventoryUi.isOpen() ? STOPPED : input.moveVector();
+    updatePlayer(player, dt, dir, map);
     followTarget(camera, player);
     renderScene(renderer, map, camera, [...npcs.map(npcEntity), playerEntity(player)]);
 

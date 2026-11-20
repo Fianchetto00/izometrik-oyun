@@ -1,0 +1,29 @@
+{
+  "types": {
+    "weapon":     { "name": "Silah",          "slot": "weapon" },
+    "armor":      { "name": "Zırh",           "slot": "armor" },
+    "material":   { "name": "Malzeme" },
+    "consumable": { "name": "Tüketilebilir" },
+    "quest":      { "name": "Görev Eşyası" }
+  },
+  "statNames": { "damage": "Hasar", "defense": "Savunma", "heal": "İyileştirme" },
+  "items": [
+    { "id": "wooden_sword",  "name": "Tahta Kılıç",       "type": "weapon", "price": 15,  "stats": { "damage": 3 },  "icon": "icon_wooden_sword",  "description": "Antrenman için yontulmuş sağlam bir kılıç." },
+    { "id": "iron_sword",    "name": "Demir Kılıç",       "type": "weapon", "price": 60,  "stats": { "damage": 6 },  "icon": "icon_iron_sword",    "description": "Köy demircisinin dövdüğü dengeli bir kılıç." },
+    { "id": "oak_staff",     "name": "Meşe Asa",          "type": "weapon", "price": 20,  "stats": { "damage": 4 },  "icon": "icon_oak_staff",     "description": "Ormanın yaşlı meşesinden kesilmiş bir asa." },
+    { "id": "spirit_staff",  "name": "Ruh Asası",         "type": "weapon", "price": 120, "stats": { "damage": 8 },  "icon": "icon_spirit_staff",  "description": "Ucundaki taş, ruhların fısıltısıyla parlar." },
+    { "id": "dagger",        "name": "Hançer",            "type": "weapon", "price": 15,  "stats": { "damage": 3 },  "icon": "icon_dagger",        "description": "Kısa, hafif ve sessiz." },
+    { "id": "shadow_blade",  "name": "Gölge Bıçağı",      "type": "weapon", "price": 110, "stats": { "damage": 8 },  "icon": "icon_shadow_blade",  "description": "Karanlıkta neredeyse görünmeyen siyah bir bıçak." },
+    { "id": "cloth_tunic",   "name": "Kumaş Tunik",       "type": "armor",  "price": 10,  "stats": { "defense": 1 }, "icon": "icon_cloth_tunic",   "description": "Rüzgârı keser, kılıcı pek kesmez." },
+    { "id": "leather_armor", "name": "Deri Zırh",         "type": "armor",  "price": 45,  "stats": { "defense": 3 }, "icon": "icon_leather_armor", "description": "Sertleştirilmiş deriden yapılmış hafif zırh." },
+    { "id": "chainmail",     "name": "Zincir Zırh",       "type": "armor",  "price": 120, "stats": { "defense": 6 }, "icon": "icon_chainmail",     "description": "Ağır ama güvenilir halka örgü zırh." },
+    { "id": "iron_ore",      "name": "Demir Cevheri",     "type": "material", "price": 8,  "icon": "icon_iron_ore",   "description": "Demircinin en çok aradığı malzeme." },
+    { "id": "coal",          "name": "Kömür",             "type": "material", "price": 4,  "icon": "icon_coal",       "description": "Ocağı harlamak için gerekli." },
+    { "id": "monster_fang",  "name": "Canavar Dişi",      "type": "material", "price": 15, "icon": "icon_monster_fang", "description": "Zindan yaratıklarından düşen keskin bir diş." },
+    { "id": "health_potion", "name": "Can İksiri",        "type": "consumable", "price": 20, "stats": { "heal": 30 }, "icon": "icon_health_potion", "description": "Kırmızı, acı ve hayat kurtarıcı." },
+    { "id": "big_health_potion", "name": "Büyük Can İksiri", "type": "consumable", "price": 50, "stats": { "heal": 70 }, "icon": "icon_big_health_potion", "description": "Ağır yaraları bile kapatır." },
+    { "id": "bread",         "name": "Ekmek",             "type": "consumable", "price": 5,  "stats": { "heal": 10 }, "icon": "icon_bread",         "description": "Fırından yeni çıkmış, hâlâ sıcak." },
+    { "id": "rusty_key",     "name": "Paslı Anahtar",     "type": "quest", "price": 0, "icon": "icon_rusty_key", "description": "Zindandaki bir kapıyı açıyor olmalı." },
+    { "id": "old_amulet",    "name": "Eski Muska",        "type": "quest", "price": 0, "icon": "icon_old_amulet", "description": "Üzerinde silinmiş yazılar olan gizemli bir muska." }
+  ]
+}

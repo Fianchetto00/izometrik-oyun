@@ -54,5 +54,22 @@
   },
   "npc": {
     "type": "shape", "shape": "character"
-  }
+  },
+  "icon_wooden_sword": { "type": "shape", "shape": "icon", "glyph": "sword", "colors": {"blade": "#c8a26b", "guard": "#7a5230", "grip": "#5a3a22"} },
+  "icon_iron_sword": { "type": "shape", "shape": "icon", "glyph": "sword", "colors": {"blade": "#c9ced4", "guard": "#6b6f75", "grip": "#5a3a22"} },
+  "icon_oak_staff": { "type": "shape", "shape": "icon", "glyph": "staff", "colors": {"shaft": "#8b5a2b", "head": "#5d8a3c"} },
+  "icon_spirit_staff": { "type": "shape", "shape": "icon", "glyph": "staff", "colors": {"shaft": "#4b3b2a", "head": "#7fd3e8"} },
+  "icon_dagger": { "type": "shape", "shape": "icon", "glyph": "dagger", "colors": {"blade": "#c9ced4", "grip": "#5a3a22"} },
+  "icon_shadow_blade": { "type": "shape", "shape": "icon", "glyph": "dagger", "colors": {"blade": "#3a3a48", "grip": "#8b1e1e"} },
+  "icon_cloth_tunic": { "type": "shape", "shape": "icon", "glyph": "armor", "colors": {"body": "#c9b27a", "trim": "#8b6b3a"} },
+  "icon_leather_armor": { "type": "shape", "shape": "icon", "glyph": "armor", "colors": {"body": "#8b5a2b", "trim": "#5a3a22"} },
+  "icon_chainmail": { "type": "shape", "shape": "icon", "glyph": "armor", "colors": {"body": "#9aa0a6", "trim": "#5f656b"} },
+  "icon_iron_ore": { "type": "shape", "shape": "icon", "glyph": "ore", "colors": {"rock": "#6e6a63", "spot": "#c98a5a"} },
+  "icon_coal": { "type": "shape", "shape": "icon", "glyph": "ore", "colors": {"rock": "#2a2a2e", "spot": "#4a4a52"} },
+  "icon_monster_fang": { "type": "shape", "shape": "icon", "glyph": "fang", "colors": {"fang": "#ece6d4", "shade": "#b8ae94"} },
+  "icon_health_potion": { "type": "shape", "shape": "icon", "glyph": "potion", "colors": {"glass": "#d9e6ec", "liquid": "#c0392b", "cork": "#8b5a2b"} },
+  "icon_big_health_potion": { "type": "shape", "shape": "icon", "glyph": "potion_big", "colors": {"glass": "#d9e6ec", "liquid": "#e74c3c", "cork": "#8b5a2b"} },
+  "icon_bread": { "type": "shape", "shape": "icon", "glyph": "bread", "colors": {"crust": "#c88a3a", "top": "#e0a95a"} },
+  "icon_rusty_key": { "type": "shape", "shape": "icon", "glyph": "key", "colors": {"metal": "#a0612f"} },
+  "icon_old_amulet": { "type": "shape", "shape": "icon", "glyph": "amulet", "colors": {"chain": "#c9a23a", "gem": "#3a8fb7"} }
 }

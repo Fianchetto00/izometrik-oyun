@@ -4,8 +4,9 @@
 
 import { SHAPES } from './shapes.js';
 import { drawCharacter } from './character.js';
+import { drawIcon } from './icons.js';
 
-const SHAPE_FNS = { ...SHAPES, character: drawCharacter };
+const SHAPE_FNS = { ...SHAPES, character: drawCharacter, icon: drawIcon };
 
 let manifest = {};
 const images = new Map();

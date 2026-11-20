@@ -44,13 +44,19 @@ src/map.js                 harita ayrıştırma, isBlocked, tohumlu ağaç yerle
 src/player.js              hareket (ekranda sabit hız) + eksen eksen çarpışma
 src/camera.js              oyuncuyu ortalayan kamera (zoom)
 src/menu.js                giriş ekranı (HTML): takma ad, sınıf, cinsiyet, önizleme
+src/inventory.js           eşya veritabanı (createItemDb) + envanter kuralları (ekle/çıkar/kuşan)
+src/inventoryUi.js         envanter paneli (HTML, I/Esc), seçili eşya ayrıntısı
+src/hud.js                 köşe göstergesi: altın, tuş ipucu
 src/npc.js                 haritadaki npcs listesinden karakterler (engel + isim etiketi)
 src/render/renderer.js     zemin katmanı + derinliğe göre sıralı nesneler
 src/render/assets.js       manifest çözümleyici (shape | image)
 src/render/shapes.js       flat / block / tree şekilleri, desenler
+src/render/icons.js        eşya simgeleri (glyph: sword, staff, potion...)
 src/render/character.js    outfit'ten insan figürü, aksesuar kayıt tablosu
 data/game.json             oyun adı, başlangıç haritası, oyuncu ayarları (hız, yarıçap), kamera zoom
-data/characters.json       giriş ekranı: sınıflar, cinsiyetler, takma ad sınırı, arayüz metinleri
+data/characters.json       giriş ekranı: sınıflar (+ başlangıç eşyaları), cinsiyetler, takma ad sınırı, metinler
+data/items.json            eşya türleri, istatistik adları, 17 eşya (id, ad, tür, fiyat, stats, icon, açıklama)
+data/ui.json               HUD ve envanter arayüz metinleri
 data/tiles.json            karo türleri: walkable, floor asset, block asset
 data/assets.json           görsel manifest
 data/outfits.json          outfit'ler: oyuncu için {sınıf}_{cinsiyet} (6 adet), her NPC'nin kendi outfit'i
@@ -85,11 +91,19 @@ docs/harita.png            köy krokisi (Paint çizimi)
 - Sınıfların henüz oyun mekaniği yok (dövüş Aşama 5'te). Kayıt (Aşama 8)
   gelince bu alanlar da kaydedilecek; Yeni Oyun / Devam Et menüsü bu ekrana bağlanacak.
 
+## Envanter
+- Durum düz veri: `{ gold, items: [{id, count}], equipped: {weapon, armor} }`
+  (kayıt için hazır). Eşya ayrıntıları yalnızca `items.json`'da.
+- Başlangıç: `game.json` → `startGold`, sınıfın `start.items` ve `start.equip`'i.
+- I tuşu paneli açar; açıkken oyuncu hareket etmez. Silah/zırh kuşan/çıkar.
+  Tüketilebilirler can sistemi (Aşama 5) gelene kadar kullanılamaz.
+- Simgeler manifestte `icon_*` girdileri (`shape: icon`), PNG ile değiştirilebilir.
+
 ## Aşamalar
 1. [x] Harita yükleme, izometrik çizim, kamera, derinlik sıralaması, WASD, çarpışma
 2. [ ] NPC'ler ve diyalog sistemi — NPC'ler yerleştirildi ve çiziliyor; diyalog bekliyor
 3. [ ] Flag'ler, quest sistemi, quest günlüğü (hikaye metni bu aşamadan önce gelecek)
-4. [ ] Eşya veritabanı, envanter, altın, envanter UI'ı
+4. [x] Eşya veritabanı, envanter, altın, envanter UI'ı (kullanıcı isteğiyle diyalogdan önce yapıldı)
 5. [ ] Sahne geçişleri (fade), dungeon, sandıklar, basit dövüş
 6. [ ] Tüccar NPC'ler ve alışveriş ekranı
 7. [ ] Demirci ve eşya geliştirme
@@ -97,4 +111,4 @@ docs/harita.png            köy krokisi (Paint çizimi)
 
 Kapsam dışı (şimdilik): balıkçılık, duo mekaniği, kostümler, PNG sprite'lar.
 
-**Şu an: Aşama 2 yarıda — NPC'ler hazır, diyalog sistemi için onay bekleniyor.**
+**Şu an: Aşama 4 bitti. Aşama 2'nin diyalog kısmı hâlâ bekliyor; sıradaki adım için onay bekleniyor.**

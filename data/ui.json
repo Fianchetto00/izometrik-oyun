@@ -1,0 +1,21 @@
+{
+  "hud": {
+    "gold": "Altın",
+    "inventoryHint": "I: Envanter"
+  },
+  "inventory": {
+    "title": "Envanter",
+    "gold": "Altın",
+    "equipped": "Kuşanılan",
+    "slots": { "weapon": "Silah", "armor": "Zırh" },
+    "empty": "Boş",
+    "totals": "Toplam",
+    "price": "Değer",
+    "equip": "Kuşan",
+    "unequip": "Çıkar",
+    "notUsable": "Can sistemi gelince kullanılabilecek.",
+    "selectHint": "Ayrıntı için bir eşyaya tıkla.",
+    "noItems": "Envanterin boş.",
+    "close": "I veya Esc ile kapat"
+  }
+}
