@@ -34,7 +34,7 @@ async function start() {
   const map = createMap(data.map, data.tiles);
   const player = createPlayer(cfg, data.map.playerStart, data.outfits[cfg.outfit]);
   const input = createInput();
-  const camera = createCamera();
+  const camera = createCamera(data.game.camera);
 
   let last = performance.now();
   function frame(now) {

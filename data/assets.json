@@ -29,11 +29,11 @@
     "colors": { "fill": "#5d5a55", "detail": "#15120f" }
   },
   "building": {
-    "type": "shape", "shape": "block", "height": 48, "trimHeight": 10,
+    "type": "shape", "shape": "block", "height": 64, "trimHeight": 12,
     "colors": { "top": "#9c4a32", "left": "#d8c39b", "right": "#b9a37c", "trim": "#7c3a26" }
   },
   "dungeon_rock": {
-    "type": "shape", "shape": "block", "height": [34, 56],
+    "type": "shape", "shape": "block", "height": [40, 72],
     "colors": {
       "top": ["#77736c", "#6e6a63", "#7f7b73"],
       "left": ["#5c5852", "#57534d"],

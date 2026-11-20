@@ -44,15 +44,20 @@ export function renderScene(renderer, map, camera, entities) {
   ctx.fillStyle = BACKGROUND;
   ctx.fillRect(0, 0, view.w, view.h);
 
-  const ox = Math.round(view.w / 2 - camera.x);
-  const oy = Math.round(view.h / 2 - camera.y);
-  const left = -ox - CULL_MARGIN;
-  const right = -ox + view.w + CULL_MARGIN;
-  const top = -oy - CULL_MARGIN;
-  const bottom = -oy + view.h + CULL_MARGIN;
+  // Visible world rectangle around the camera, in projected pixels.
+  const zoom = camera.zoom;
+  const halfW = view.w / 2 / zoom;
+  const halfH = view.h / 2 / zoom;
+  const left = camera.x - halfW - CULL_MARGIN;
+  const right = camera.x + halfW + CULL_MARGIN;
+  const top = camera.y - halfH - CULL_MARGIN;
+  const bottom = camera.y + halfH + CULL_MARGIN;
 
+  // Snap the camera to whole screen pixels to avoid shimmering seams.
   ctx.save();
-  ctx.translate(ox, oy);
+  ctx.translate(Math.round(view.w / 2), Math.round(view.h / 2));
+  ctx.scale(zoom, zoom);
+  ctx.translate(-Math.round(camera.x * zoom) / zoom, -Math.round(camera.y * zoom) / zoom);
 
   const objects = [];
   for (let y = 0; y < map.height; y++) {

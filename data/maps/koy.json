@@ -1,8 +1,8 @@
 {
   "id": "koy",
   "name": "Köy",
-  "width": 40,
-  "height": 21,
+  "width": 80,
+  "height": 42,
   "legend": {
     "T": "forest_ground",
     "~": "water",
@@ -15,48 +15,133 @@
     "X": "dungeon_door"
   },
   "rows": [
-    "TTTTTT~~~~~~..BBBBBBBBBBB...............",
-    "TTTTTT~~~~~~..BBBBBBBBBBB...............",
-    "TTTTTT~~~~~~..BBBBBBBBBBB...............",
-    "TTTTTT~~~~~~............................",
-    "TTTTTT~~~~~~............................",
-    "TTTTTT~~~~~~.....oooooo.......BBBB......",
-    "TTTTTT~~~~~~....oooooooo......BBBB......",
-    "TTTTTT~~~~~~...oooooooooo.....BBBB......",
-    "TTTTTT======...oooooooooo.....BBBB......",
-    "TTTTTT======...oooooooooo.....BBBB......",
-    "TTTTTT======...oooooooooo.....BBBB......",
-    "TTTTTT~~~~~~...oooooooooo...............",
-    "TTTTTT~~~~~~...oooooooooo...............",
-    "TTTTTT~~~~~~....oooooooo.....RRRRXRRRR..",
-    "TTTTTT~~~~~~.....oooooo......RRRRRRRRR..",
-    "TTTTTT~~~~~~.................RRRRRRRRR..",
-    "TTTTTT~~~~~~.BBBBBBKBBBBBB...RRRRRRRRR..",
-    "TTTTTT~~~~~~.BBBBBBBBBBBBB...RRRRRRRRR..",
-    "TTTTTT~~~~~~.BBBBBBBBBBBBB...RRRRRRRRR..",
-    "TTTTTT~~~~~~.BBBBBBBBBBBBB...RRRRRRRRR..",
-    "TTTTTT~~~~~~.BBBBBBBBBBBBB.............."
+    "TTTTTTTTTTTT~~~~~~~~~~~~....BBBBBBBBBBBBBBBBBBBBBB..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~....BBBBBBBBBBBBBBBBBBBBBB..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~....BBBBBBBBBBBBBBBBBBBBBB..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~....BBBBBBBBBBBBBBBBBBBBBB..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~....BBBBBBBBBBBBBBBBBBBBBB..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~....BBBBBBBBBBBBBBBBBBBBBB..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........................................................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........................................................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........................................................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........................................................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..........oooooooooooo..............BBBBBBBB............",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..........oooooooooooo..............BBBBBBBB............",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........oooooooooooooooo............BBBBBBBB............",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........oooooooooooooooo............BBBBBBBB............",
+    "TTTTTTTTTTTT~~~~~~~~~~~~......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT~~~~~~~~~~~~......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT============......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT============......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT============......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT============......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT============......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT============......oooooooooooooooooooo..........BBBBBBBB............",
+    "TTTTTTTTTTTT~~~~~~~~~~~~......oooooooooooooooooooo..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~......oooooooooooooooooooo..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~......oooooooooooooooooooo..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~......oooooooooooooooooooo..............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........oooooooooooooooo..........RRRRRRRRXXRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~........oooooooooooooooo..........RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..........oooooooooooo............RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..........oooooooooooo............RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..................................RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..................................RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBKKBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB......RRRRRRRRRRRRRRRRRR....",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB............................",
+    "TTTTTTTTTTTT~~~~~~~~~~~~..BBBBBBBBBBBBBBBBBBBBBBBBBB............................"
   ],
   "trees": {
     "asset": "tree",
     "seed": 20261116,
     "density": 0.25,
-    "tileTypes": ["forest_ground"],
+    "tileTypes": [
+      "forest_ground"
+    ],
     "clear": [
-      { "x": 0, "y": 8, "w": 6, "h": 3 },
-      { "x": 4, "y": 7, "w": 2, "h": 5 }
+      {
+        "x": 0,
+        "y": 16,
+        "w": 12,
+        "h": 6
+      },
+      {
+        "x": 8,
+        "y": 14,
+        "w": 4,
+        "h": 10
+      }
     ]
   },
-  "playerStart": { "x": 20, "y": 14 },
+  "playerStart": {
+    "x": 40,
+    "y": 29
+  },
   "npcs": [
-    { "id": "guard", "role": "guard", "x": 20, "y": 10 },
-    { "id": "captain", "role": "captain", "x": 19, "y": 16 },
-    { "id": "fisher", "role": "fisher", "x": 12, "y": 7 },
-    { "id": "blacksmith", "role": "blacksmith", "x": 28, "y": 5 },
-    { "id": "duo", "role": "duo", "x": 28, "y": 9 },
-    { "id": "armor_merchant", "role": "armor_merchant", "x": 17, "y": 3 },
-    { "id": "weapon_merchant", "role": "weapon_merchant", "x": 21, "y": 3 },
-    { "id": "general_merchant", "role": "general_merchant", "x": 28, "y": 10 },
-    { "id": "dungeon_entrance", "role": "dungeon_entrance", "x": 33, "y": 13, "interactFrom": { "x": 33, "y": 12 } }
+    {
+      "id": "guard",
+      "role": "guard",
+      "x": 40,
+      "y": 20
+    },
+    {
+      "id": "captain",
+      "role": "captain",
+      "x": 38,
+      "y": 32
+    },
+    {
+      "id": "fisher",
+      "role": "fisher",
+      "x": 24,
+      "y": 15
+    },
+    {
+      "id": "blacksmith",
+      "role": "blacksmith",
+      "x": 58,
+      "y": 10
+    },
+    {
+      "id": "duo",
+      "role": "duo",
+      "x": 58,
+      "y": 18
+    },
+    {
+      "id": "armor_merchant",
+      "role": "armor_merchant",
+      "x": 34,
+      "y": 6
+    },
+    {
+      "id": "weapon_merchant",
+      "role": "weapon_merchant",
+      "x": 42,
+      "y": 6
+    },
+    {
+      "id": "general_merchant",
+      "role": "general_merchant",
+      "x": 58,
+      "y": 20
+    },
+    {
+      "id": "dungeon_entrance",
+      "role": "dungeon_entrance",
+      "x": 66,
+      "y": 26,
+      "interactFrom": {
+        "x": 66,
+        "y": 25
+      }
+    }
   ]
 }

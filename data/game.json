@@ -5,5 +5,8 @@
     "asset": "player",
     "speed": 150,
     "radius": 0.25
+  },
+  "camera": {
+    "zoom": 1.5
   }
 }

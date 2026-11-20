@@ -41,17 +41,17 @@ src/iso.js                 grid <-> ekran dönüşümleri (TILE_W=64, TILE_H=32)
 src/input.js               klavye durumu; moveVector() ekran-uzayı yönü verir
 src/map.js                 harita ayrıştırma, isBlocked, tohumlu ağaç yerleşimi
 src/player.js              hareket (ekranda sabit hız) + eksen eksen çarpışma
-src/camera.js              oyuncuyu ortalayan kamera
+src/camera.js              oyuncuyu ortalayan kamera (zoom)
 src/render/renderer.js     zemin katmanı + derinliğe göre sıralı nesneler
 src/render/assets.js       manifest çözümleyici (shape | image)
 src/render/shapes.js       flat / block / tree şekilleri, desenler
 src/render/character.js    outfit'ten insan figürü, aksesuar kayıt tablosu
-data/game.json             başlangıç haritası, oyuncu ayarları (outfit, hız, yarıçap)
+data/game.json             başlangıç haritası, oyuncu ayarları (outfit, hız, yarıçap), kamera zoom
 data/tiles.json            karo türleri: walkable, floor asset, block asset
 data/assets.json           görsel manifest
 data/outfits.json          outfit'ler ("default")
-data/maps/koy.json         köy: legend + rows (40x21), trees, playerStart, npcs
-docs/                      kroki (harita.png henüz eklenmedi)
+data/maps/koy.json         köy: legend + rows (80x42), trees, playerStart, npcs
+docs/harita.png            köy krokisi (Paint çizimi)
 ```
 
 ## Temel kavramlar
@@ -64,6 +64,9 @@ docs/                      kroki (harita.png henüz eklenmedi)
   olarak görünür).
 - Ağaçlar: `trees.seed` + `density` ile çalışma anında üretilir; `clear`
   dikdörtgenleri (köprü ağzı, batı yolu) boş kalır.
+- Köy, orijinal 40x21 ızgaranın her karosu 2x2 yapılarak 80x42'ye büyütüldü;
+  kapılar (K, X) 2 karo geniş, 1 karo derin. Kamera `game.json` → `camera.zoom`
+  (şu an 1.5) ile yakınlaştırılır.
 - `npcs` listesi haritada duruyor ama Aşama 2'ye kadar kullanılmıyor.
 
 ## Aşamalar
