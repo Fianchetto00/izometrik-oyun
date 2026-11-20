@@ -6,6 +6,7 @@ import { drawAsset } from './assets.js';
 
 const BACKGROUND = '#141821';
 const CULL_MARGIN = 96;
+const LABEL_OFFSET = 50; // pixels above the foot point
 
 export function createRenderer(canvas) {
   const ctx = canvas.getContext('2d');
@@ -81,5 +82,21 @@ export function renderScene(renderer, map, camera, entities) {
   objects.sort((a, b) => a.depth - b.depth);
   for (const o of objects) drawAsset(ctx, o.asset, o.sx, o.sy, o.opts);
 
+  // Name labels go on top of everything so they stay readable.
+  for (const e of entities) {
+    if (e.label) drawLabel(ctx, e.label, gridToScreen(e.x, e.y));
+  }
+
   ctx.restore();
+}
+
+function drawLabel(ctx, text, p) {
+  ctx.font = 'bold 9px sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'bottom';
+  ctx.lineWidth = 3;
+  ctx.strokeStyle = 'rgba(20,24,33,0.85)';
+  ctx.strokeText(text, p.x, p.y - LABEL_OFFSET);
+  ctx.fillStyle = '#f4efe0';
+  ctx.fillText(text, p.x, p.y - LABEL_OFFSET);
 }

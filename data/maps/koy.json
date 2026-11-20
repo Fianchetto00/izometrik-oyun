@@ -88,49 +88,65 @@
     {
       "id": "guard",
       "role": "guard",
+      "name": "Gardiyan",
+      "outfit": "guard",
       "x": 40,
       "y": 20
     },
     {
       "id": "captain",
       "role": "captain",
+      "name": "Yüzbaşı",
+      "outfit": "captain",
       "x": 38,
-      "y": 32
+      "y": 29
     },
     {
       "id": "fisher",
       "role": "fisher",
+      "name": "Balıkçı",
+      "outfit": "fisher",
       "x": 24,
       "y": 15
     },
     {
       "id": "blacksmith",
       "role": "blacksmith",
-      "x": 58,
+      "name": "Demirci",
+      "outfit": "blacksmith",
+      "x": 56,
       "y": 10
     },
     {
-      "id": "duo",
+      "id": "krios",
       "role": "duo",
-      "x": 58,
+      "name": "Krios",
+      "outfit": "krios",
+      "x": 56,
       "y": 18
     },
     {
       "id": "armor_merchant",
       "role": "armor_merchant",
+      "name": "Zırh Satıcısı",
+      "outfit": "armor_merchant",
       "x": 34,
       "y": 6
     },
     {
       "id": "weapon_merchant",
       "role": "weapon_merchant",
+      "name": "Silah Satıcısı",
+      "outfit": "weapon_merchant",
       "x": 42,
       "y": 6
     },
     {
       "id": "general_merchant",
       "role": "general_merchant",
-      "x": 58,
+      "name": "Satıcı",
+      "outfit": "general_merchant",
+      "x": 56,
       "y": 20
     },
     {

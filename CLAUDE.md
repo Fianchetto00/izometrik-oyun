@@ -42,6 +42,7 @@ src/input.js               klavye durumu; moveVector() ekran-uzayı yönü verir
 src/map.js                 harita ayrıştırma, isBlocked, tohumlu ağaç yerleşimi
 src/player.js              hareket (ekranda sabit hız) + eksen eksen çarpışma
 src/camera.js              oyuncuyu ortalayan kamera (zoom)
+src/npc.js                 haritadaki npcs listesinden karakterler (engel + isim etiketi)
 src/render/renderer.js     zemin katmanı + derinliğe göre sıralı nesneler
 src/render/assets.js       manifest çözümleyici (shape | image)
 src/render/shapes.js       flat / block / tree şekilleri, desenler
@@ -49,7 +50,7 @@ src/render/character.js    outfit'ten insan figürü, aksesuar kayıt tablosu
 data/game.json             başlangıç haritası, oyuncu ayarları (outfit, hız, yarıçap), kamera zoom
 data/tiles.json            karo türleri: walkable, floor asset, block asset
 data/assets.json           görsel manifest
-data/outfits.json          outfit'ler ("default")
+data/outfits.json          outfit'ler ("default" oyuncu, her NPC'nin kendi outfit'i)
 data/maps/koy.json         köy: legend + rows (80x42), trees, playerStart, npcs
 docs/harita.png            köy krokisi (Paint çizimi)
 ```
@@ -67,11 +68,15 @@ docs/harita.png            köy krokisi (Paint çizimi)
 - Köy, orijinal 40x21 ızgaranın her karosu 2x2 yapılarak 80x42'ye büyütüldü;
   kapılar (K, X) 2 karo geniş, 1 karo derin. Kamera `game.json` → `camera.zoom`
   (şu an 1.5) ile yakınlaştırılır.
-- `npcs` listesi haritada duruyor ama Aşama 2'ye kadar kullanılmıyor.
+- `npcs` girdileri: id, role, name (Türkçe, etiket), outfit, x, y. `outfit`'i
+  olanlar çizilir ve karolarını engeller; olmayanlar (dungeon girişi) sadece
+  etkileşim noktasıdır. Sarı NPC Krios (role "duo"). Krokiye göre yerleri
+  verildi; atölye/kışla önündekiler bina arkasında kalmasın diye birkaç karo
+  öne alındı. Görünümleri geçici, modellemeler sonra.
 
 ## Aşamalar
 1. [x] Harita yükleme, izometrik çizim, kamera, derinlik sıralaması, WASD, çarpışma
-2. [ ] NPC'ler ve diyalog sistemi
+2. [ ] NPC'ler ve diyalog sistemi — NPC'ler yerleştirildi ve çiziliyor; diyalog bekliyor
 3. [ ] Flag'ler, quest sistemi, quest günlüğü (hikaye metni bu aşamadan önce gelecek)
 4. [ ] Eşya veritabanı, envanter, altın, envanter UI'ı
 5. [ ] Sahne geçişleri (fade), dungeon, sandıklar, basit dövüş
@@ -81,4 +86,4 @@ docs/harita.png            köy krokisi (Paint çizimi)
 
 Kapsam dışı (şimdilik): balıkçılık, duo mekaniği, kostümler, PNG sprite'lar.
 
-**Şu an: Aşama 1 tamamlandı, onay bekleniyor.**
+**Şu an: Aşama 2 yarıda — NPC'ler hazır, diyalog sistemi için onay bekleniyor.**

@@ -5,6 +5,7 @@ import { createInput } from './input.js';
 import { createMap } from './map.js';
 import { createPlayer, updatePlayer } from './player.js';
 import { createCamera, followTarget } from './camera.js';
+import { createNpcs, npcEntity } from './npc.js';
 import { loadAssets } from './render/assets.js';
 import { createRenderer, drawMessage, renderScene } from './render/renderer.js';
 
@@ -32,6 +33,7 @@ async function start() {
 
   const cfg = data.game.player;
   const map = createMap(data.map, data.tiles);
+  const npcs = createNpcs(data.map.npcs, data.outfits, map);
   const player = createPlayer(cfg, data.map.playerStart, data.outfits[cfg.outfit]);
   const input = createInput();
   const camera = createCamera(data.game.camera);
@@ -43,7 +45,7 @@ async function start() {
 
     updatePlayer(player, dt, input.moveVector(), map);
     followTarget(camera, player);
-    renderScene(renderer, map, camera, [playerEntity(player)]);
+    renderScene(renderer, map, camera, [...npcs.map(npcEntity), playerEntity(player)]);
 
     requestAnimationFrame(frame);
   }

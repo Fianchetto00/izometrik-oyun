@@ -14,6 +14,7 @@ export function createMap(mapData, tileDefs) {
   });
 
   const trees = placeTrees(mapData.trees, tiles, width, height);
+  const blockers = new Set(); // tiles occupied by NPCs
   const inBounds = (x, y) => x >= 0 && y >= 0 && x < width && y < height;
 
   return {
@@ -25,10 +26,12 @@ export function createMap(mapData, tileDefs) {
     tileType: (x, y) => (inBounds(x, y) ? tiles[y][x] : null),
     tileAt: (x, y) => (inBounds(x, y) ? tileDefs[tiles[y][x]] : null),
     hasTree: (x, y) => trees.has(key(x, y)),
+    addBlocker: (x, y) => blockers.add(key(x, y)),
 
     isBlocked(x, y) {
       if (!inBounds(x, y)) return true;
-      return !tileDefs[tiles[y][x]].walkable || trees.has(key(x, y));
+      const k = key(x, y);
+      return !tileDefs[tiles[y][x]].walkable || trees.has(k) || blockers.has(k);
     },
   };
 }

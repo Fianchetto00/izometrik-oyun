@@ -51,5 +51,8 @@
   },
   "player": {
     "type": "shape", "shape": "character"
+  },
+  "npc": {
+    "type": "shape", "shape": "character"
   }
 }
