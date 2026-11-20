@@ -11,6 +11,7 @@ export function createInput(target = window) {
   const down = new Set();
 
   target.addEventListener('keydown', (e) => {
+    if (isTyping(e)) return; // let text fields receive W, A, S, D
     down.add(e.code);
     if (MOVE_KEYS[e.code]) e.preventDefault();
   });
@@ -31,4 +32,9 @@ export function createInput(target = window) {
       return len > 0 ? { x: x / len, y: y / len } : { x: 0, y: 0 };
     },
   };
+}
+
+function isTyping(e) {
+  const tag = e.target && e.target.tagName;
+  return tag === 'INPUT' || tag === 'TEXTAREA';
 }

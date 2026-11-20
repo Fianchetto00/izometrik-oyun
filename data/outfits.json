@@ -1,38 +1,17 @@
 {
-  "default": {
-    "skin": "#f1c27d", "hair": "#4a2f1b", "shirt": "#2e6fb7", "pants": "#3b3b4f", "boots": "#5a3a22",
-    "accessories": [{ "type": "belt", "color": "#8b5a2b" }]
-  },
-  "guard": {
-    "skin": "#e0ac69", "hair": "#2b1d12", "shirt": "#3f8f3a", "pants": "#4a4a4a", "boots": "#2f2f2f",
-    "accessories": [{ "type": "belt", "color": "#c0c0c0" }, { "type": "hat", "color": "#9aa0a6" }]
-  },
-  "captain": {
-    "skin": "#c68642", "hair": "#1c1c1c", "shirt": "#7b3fa0", "pants": "#2e2e3a", "boots": "#1f1f1f",
-    "accessories": [{ "type": "belt", "color": "#d4af37" }, { "type": "hat", "color": "#4b2566" }]
-  },
-  "fisher": {
-    "skin": "#f1c27d", "hair": "#8a8a8a", "shirt": "#8f949a", "pants": "#3d4a5c", "boots": "#3a2a1a",
-    "accessories": [{ "type": "hat", "color": "#c9b27a" }]
-  },
-  "blacksmith": {
-    "skin": "#d29b6c", "hair": "#3a2416", "shirt": "#24418f", "pants": "#3a2f28", "boots": "#2a1d14",
-    "accessories": [{ "type": "belt", "color": "#5a3a22" }]
-  },
-  "krios": {
-    "skin": "#f3d2a7", "hair": "#e8e2d0", "shirt": "#e2b928", "pants": "#4b3b2a", "boots": "#3a2a1a",
-    "accessories": [{ "type": "belt", "color": "#6b4423" }]
-  },
-  "armor_merchant": {
-    "skin": "#e0ac69", "hair": "#5a3a22", "shirt": "#b8322b", "pants": "#3b3b4f", "boots": "#3a2a1a",
-    "accessories": [{ "type": "belt", "color": "#8b8b8b" }]
-  },
-  "weapon_merchant": {
-    "skin": "#f1c27d", "hair": "#1c1c1c", "shirt": "#c4452f", "pants": "#2e2e3a", "boots": "#2f2f2f",
-    "accessories": [{ "type": "belt", "color": "#5a3a22" }]
-  },
-  "general_merchant": {
-    "skin": "#c68642", "hair": "#6b4423", "shirt": "#a8342c", "pants": "#4b3b2a", "boots": "#3a2a1a",
-    "accessories": [{ "type": "hat", "color": "#7a5230" }]
-  }
+  "default": {"skin": "#f1c27d", "hair": "#4a2f1b", "shirt": "#2e6fb7", "pants": "#3b3b4f", "boots": "#5a3a22", "accessories": [{"type": "belt", "color": "#8b5a2b"}]},
+  "guard": {"skin": "#e0ac69", "hair": "#2b1d12", "shirt": "#3f8f3a", "pants": "#4a4a4a", "boots": "#2f2f2f", "accessories": [{"type": "belt", "color": "#c0c0c0"}, {"type": "hat", "color": "#9aa0a6"}]},
+  "captain": {"skin": "#c68642", "hair": "#1c1c1c", "shirt": "#7b3fa0", "pants": "#2e2e3a", "boots": "#1f1f1f", "accessories": [{"type": "belt", "color": "#d4af37"}, {"type": "hat", "color": "#4b2566"}]},
+  "fisher": {"skin": "#f1c27d", "hair": "#8a8a8a", "shirt": "#8f949a", "pants": "#3d4a5c", "boots": "#3a2a1a", "accessories": [{"type": "hat", "color": "#c9b27a"}]},
+  "blacksmith": {"skin": "#d29b6c", "hair": "#3a2416", "shirt": "#24418f", "pants": "#3a2f28", "boots": "#2a1d14", "accessories": [{"type": "belt", "color": "#5a3a22"}]},
+  "krios": {"skin": "#f3d2a7", "hair": "#e8e2d0", "shirt": "#e2b928", "pants": "#4b3b2a", "boots": "#3a2a1a", "accessories": [{"type": "belt", "color": "#6b4423"}]},
+  "armor_merchant": {"skin": "#e0ac69", "hair": "#5a3a22", "shirt": "#b8322b", "pants": "#3b3b4f", "boots": "#3a2a1a", "accessories": [{"type": "belt", "color": "#8b8b8b"}]},
+  "weapon_merchant": {"skin": "#f1c27d", "hair": "#1c1c1c", "shirt": "#c4452f", "pants": "#2e2e3a", "boots": "#2f2f2f", "accessories": [{"type": "belt", "color": "#5a3a22"}]},
+  "general_merchant": {"skin": "#c68642", "hair": "#6b4423", "shirt": "#a8342c", "pants": "#4b3b2a", "boots": "#3a2a1a", "accessories": [{"type": "hat", "color": "#7a5230"}]},
+  "warrior_male": {"skin": "#e0ac69", "hair": "#4a2f1b", "shirt": "#9c2f2f", "pants": "#4a4a52", "boots": "#3a2a1a", "accessories": [{"type": "belt", "color": "#b8b8b8"}, {"type": "hat", "color": "#8f969c"}]},
+  "warrior_female": {"skin": "#f1c27d", "hair": "#7a3b1c", "shirt": "#9c2f2f", "pants": "#4a4a52", "boots": "#3a2a1a", "accessories": [{"type": "long_hair", "color": "#7a3b1c"}, {"type": "belt", "color": "#b8b8b8"}, {"type": "headband", "color": "#8f969c"}]},
+  "shaman_male": {"skin": "#c68642", "hair": "#2b1d12", "shirt": "#4f7a3a", "pants": "#5a4630", "boots": "#3a2a1a", "accessories": [{"type": "belt", "color": "#a0522d"}, {"type": "feather", "color": "#e8e2d0"}]},
+  "shaman_female": {"skin": "#d29b6c", "hair": "#2b1d12", "shirt": "#4f7a3a", "pants": "#5a4630", "boots": "#3a2a1a", "accessories": [{"type": "long_hair", "color": "#2b1d12"}, {"type": "belt", "color": "#a0522d"}, {"type": "feather", "color": "#e8e2d0"}]},
+  "ninja_male": {"skin": "#f1c27d", "hair": "#1c1c1c", "shirt": "#24242c", "pants": "#1c1c22", "boots": "#111111", "accessories": [{"type": "belt", "color": "#8b1e1e"}, {"type": "headband", "color": "#8b1e1e"}, {"type": "mask", "color": "#24242c"}]},
+  "ninja_female": {"skin": "#f3d2a7", "hair": "#1c1c1c", "shirt": "#24242c", "pants": "#1c1c22", "boots": "#111111", "accessories": [{"type": "long_hair", "color": "#1c1c1c"}, {"type": "belt", "color": "#8b1e1e"}, {"type": "headband", "color": "#8b1e1e"}, {"type": "mask", "color": "#24242c"}]}
 }

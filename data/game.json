@@ -1,7 +1,7 @@
 {
+  "title": "Köy Macerası",
   "startMap": "koy",
   "player": {
-    "outfit": "default",
     "asset": "player",
     "speed": 150,
     "radius": 0.25

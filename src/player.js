@@ -16,6 +16,9 @@ export function createPlayer(config, start, outfit) {
     moving: false,
     walkTime: 0,
     facing: 1,             // 1 = facing screen-right, -1 = screen-left
+    name: '',              // nickname, set by character creation
+    classId: null,
+    gender: null,
   };
 }
 

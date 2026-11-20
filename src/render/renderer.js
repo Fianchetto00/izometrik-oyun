@@ -95,6 +95,7 @@ function drawLabel(ctx, text, p) {
   ctx.textAlign = 'center';
   ctx.textBaseline = 'bottom';
   ctx.lineWidth = 3;
+  ctx.lineJoin = 'round'; // avoids spiky miter corners on glyph outlines
   ctx.strokeStyle = 'rgba(20,24,33,0.85)';
   ctx.strokeText(text, p.x, p.y - LABEL_OFFSET);
   ctx.fillStyle = '#f4efe0';

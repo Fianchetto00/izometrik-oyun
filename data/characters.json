@@ -1,0 +1,22 @@
+{
+  "nick": { "min": 2, "max": 16 },
+  "classes": [
+    { "id": "warrior", "name": "Savaşçı", "description": "Ağır zırh ve kılıçla ön safta dövüşür." },
+    { "id": "shaman", "name": "Şaman", "description": "Doğanın ruhlarından güç alır, yaraları sarar." },
+    { "id": "ninja", "name": "Ninja", "description": "Hızlı ve sessizdir, gölgelerden saldırır." }
+  ],
+  "genders": [
+    { "id": "male", "name": "Erkek" },
+    { "id": "female", "name": "Kadın" }
+  ],
+  "outfitPattern": "{class}_{gender}",
+  "ui": {
+    "subtitle": "Karakterini oluştur",
+    "nickLabel": "Takma ad",
+    "nickPlaceholder": "Adını yaz...",
+    "classLabel": "Sınıf",
+    "genderLabel": "Cinsiyet",
+    "start": "Oyuna Başla",
+    "errorNick": "Takma ad {min}-{max} karakter olmalı."
+  }
+}

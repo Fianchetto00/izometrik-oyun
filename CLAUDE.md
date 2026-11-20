@@ -34,7 +34,8 @@ Sonra `http://localhost:8000/` aç. Build adımı yok.
 
 ## Proje yapısı
 ```
-index.html                 canvas + ./src/main.js
+index.html                 canvas + ./style.css + ./src/main.js
+style.css                  HTML arayüz stilleri (giriş ekranı)
 src/main.js                veri yükleme, oyun döngüsü
 src/loader.js              JSON yükleme (loadJSON, loadAll, mapPath)
 src/iso.js                 grid <-> ekran dönüşümleri (TILE_W=64, TILE_H=32)
@@ -42,15 +43,17 @@ src/input.js               klavye durumu; moveVector() ekran-uzayı yönü verir
 src/map.js                 harita ayrıştırma, isBlocked, tohumlu ağaç yerleşimi
 src/player.js              hareket (ekranda sabit hız) + eksen eksen çarpışma
 src/camera.js              oyuncuyu ortalayan kamera (zoom)
+src/menu.js                giriş ekranı (HTML): takma ad, sınıf, cinsiyet, önizleme
 src/npc.js                 haritadaki npcs listesinden karakterler (engel + isim etiketi)
 src/render/renderer.js     zemin katmanı + derinliğe göre sıralı nesneler
 src/render/assets.js       manifest çözümleyici (shape | image)
 src/render/shapes.js       flat / block / tree şekilleri, desenler
 src/render/character.js    outfit'ten insan figürü, aksesuar kayıt tablosu
-data/game.json             başlangıç haritası, oyuncu ayarları (outfit, hız, yarıçap), kamera zoom
+data/game.json             oyun adı, başlangıç haritası, oyuncu ayarları (hız, yarıçap), kamera zoom
+data/characters.json       giriş ekranı: sınıflar, cinsiyetler, takma ad sınırı, arayüz metinleri
 data/tiles.json            karo türleri: walkable, floor asset, block asset
 data/assets.json           görsel manifest
-data/outfits.json          outfit'ler ("default" oyuncu, her NPC'nin kendi outfit'i)
+data/outfits.json          outfit'ler: oyuncu için {sınıf}_{cinsiyet} (6 adet), her NPC'nin kendi outfit'i
 data/maps/koy.json         köy: legend + rows (80x42), trees, playerStart, npcs
 docs/harita.png            köy krokisi (Paint çizimi)
 ```
@@ -73,6 +76,14 @@ docs/harita.png            köy krokisi (Paint çizimi)
   etkileşim noktasıdır. Sarı NPC Krios (role "duo"). Krokiye göre yerleri
   verildi; atölye/kışla önündekiler bina arkasında kalmasın diye birkaç karo
   öne alındı. Görünümleri geçici, modellemeler sonra.
+
+## Giriş ekranı
+- Oyun açılınca köy arka planda çizilir, üstünde HTML form: takma ad (2-16),
+  sınıf (Savaşçı / Şaman / Ninja), cinsiyet (Erkek / Kadın) ve canlı önizleme.
+- Seçim `outfitPattern` ile outfit'e çevrilir (ör. `ninja_female`). Oyuncunun
+  `name`, `classId`, `gender` alanları tutulur; takma ad başının üstünde yazar.
+- Sınıfların henüz oyun mekaniği yok (dövüş Aşama 5'te). Kayıt (Aşama 8)
+  gelince bu alanlar da kaydedilecek; Yeni Oyun / Devam Et menüsü bu ekrana bağlanacak.
 
 ## Aşamalar
 1. [x] Harita yükleme, izometrik çizim, kamera, derinlik sıralaması, WASD, çarpışma

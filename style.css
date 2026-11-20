@@ -1,0 +1,37 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #141821; }
+canvas#game { display: block; }
+
+.menu-overlay {
+  position: fixed; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(10, 12, 18, 0.72); font-family: sans-serif; color: #f4efe0;
+}
+.menu-panel {
+  width: min(420px, calc(100vw - 32px)); padding: 24px; box-sizing: border-box;
+  background: #232a36; border: 2px solid #9c4a32; border-radius: 10px;
+  display: flex; flex-direction: column; align-items: stretch; gap: 14px;
+}
+.menu-title { margin: 0; text-align: center; font-size: 28px; color: #e2b928; }
+.menu-subtitle { margin: -8px 0 0; text-align: center; color: #b9b2a0; }
+.menu-field { display: flex; flex-direction: column; gap: 6px; }
+.menu-label { font-weight: bold; font-size: 14px; }
+.menu-input {
+  padding: 9px 10px; font-size: 16px; border-radius: 6px; border: 1px solid #555e6e;
+  background: #141821; color: #f4efe0;
+}
+.menu-choices { display: flex; gap: 8px; }
+.menu-choice {
+  flex: 1; padding: 9px 0; font-size: 15px; border-radius: 6px; cursor: pointer;
+  border: 1px solid #555e6e; background: #141821; color: #f4efe0;
+}
+.menu-choice.selected { background: #9c4a32; border-color: #e2b928; }
+.menu-desc { margin: 0; font-size: 13px; color: #b9b2a0; min-height: 1.3em; }
+.menu-preview {
+  align-self: center; width: 120px; height: 180px;
+  background: #6fae4f; border-radius: 8px; image-rendering: auto;
+}
+.menu-error { margin: 0; min-height: 1.2em; color: #ff8a7a; font-size: 13px; text-align: center; }
+.menu-start {
+  padding: 11px; font-size: 17px; font-weight: bold; border: none; border-radius: 6px;
+  background: #e2b928; color: #232a36; cursor: pointer;
+}
+.menu-start:hover { background: #f0c93a; }

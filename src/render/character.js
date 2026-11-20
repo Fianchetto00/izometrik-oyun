@@ -11,6 +11,27 @@ const ACCESSORIES = {
     ctx.fillRect(cx - 8, top - 10, 16, 3);
     ctx.fillRect(cx - 5, top - 16, 10, 6);
   },
+  // Hair falling to the shoulders on both sides of the head.
+  long_hair(ctx, cx, top, acc) {
+    ctx.fillStyle = acc.color;
+    ctx.fillRect(cx - 8, top - 9, 3, 13);
+    ctx.fillRect(cx + 5, top - 9, 3, 13);
+  },
+  headband(ctx, cx, top, acc) {
+    ctx.fillStyle = acc.color;
+    ctx.fillRect(cx - 7, top - 11, 14, 2);
+    ctx.fillRect(cx - 10, top - 10, 3, 2);
+  },
+  // Cloth over the lower face, below the eyes.
+  mask(ctx, cx, top, acc) {
+    ctx.fillStyle = acc.color;
+    ctx.fillRect(cx - 6, top - 5, 12, 5);
+  },
+  feather(ctx, cx, top, acc) {
+    ctx.fillStyle = acc.color;
+    ctx.fillRect(cx + 4, top - 21, 2, 8);
+    ctx.fillRect(cx + 3, top - 19, 4, 3);
+  },
 };
 
 function rect(ctx, color, x, y, w, h) {
